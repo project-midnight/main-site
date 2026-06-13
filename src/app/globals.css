@@ -25,14 +25,14 @@
   --accent-blue: #5BA4FF;
   --accent-gradient: linear-gradient(135deg, #7B5FFF, #5BA4FF);
   --accent-gradient-hover: linear-gradient(135deg, #8C73FF, #6DB1FF);
-  --accent-glow: rgba(91, 164, 255, 0.12);
+  --accent-glow: rgba(99, 169, 255, 0.12);
   --accent-glow-strong: rgba(91, 164, 255, 0.20);
 
   /* Status */
   --status-active: #34D399;
   --status-active-bg: rgba(52, 211, 153, 0.10);
   --status-wip: #FBBF24;
-  --status-wip-bg: rgba(251, 191, 36, 0.10);
+  --status-wip-bg: rgba(255, 194, 38, 0.1);
 
   /* Spacing */
   --space-xs: 4px;
@@ -80,6 +80,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -160,13 +161,23 @@ p {
 /* --- Scroll Reveal --- */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .reveal {
+    transform: translateY(16px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
 }
 
 /* --- Responsive --- */

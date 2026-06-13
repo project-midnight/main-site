@@ -45,6 +45,13 @@
   background-clip: text;
 }
 
+.logoIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
 /* Links */
 .links {
   display: flex;

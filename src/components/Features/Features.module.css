@@ -27,9 +27,13 @@
   line-height: 1.7;
 }
 
+.descriptionEmoji {
+  margin-right: 6px;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
 }
 
@@ -95,6 +99,11 @@
   color: var(--status-wip);
 }
 
+.iconDrive {
+  background: linear-gradient(135deg, rgba(148, 163, 184, 0.15), rgba(100, 116, 139, 0.15));
+  color: #94A3B8; /* Slate 400 for frozen/inactive */
+}
+
 /* Status Badge */
 .badge {
   font-family: var(--font-label), sans-serif;
@@ -117,6 +126,12 @@
   background: var(--status-wip-bg);
   color: var(--status-wip);
   border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.badgeFrozen {
+  background: rgba(148, 163, 184, 0.1);
+  color: #94A3B8;
+  border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .dot {
@@ -177,6 +192,9 @@
 
 .cardAction {
   margin-top: auto;
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
 }
 
 /* Buttons */
@@ -200,7 +218,7 @@
   transform: translateY(-1px);
 }
 
-.btnDisabled {
+.btnSecondary {
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
@@ -209,17 +227,24 @@
   font-size: 14px;
   font-weight: 500;
   background: var(--bg-tertiary);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   border: 1px solid var(--border-default);
-  opacity: 0.6;
-  cursor: not-allowed;
+  transition: all var(--transition-default);
+}
+
+.btnSecondary:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  transform: translateY(-1px);
 }
 
 .arrow {
   transition: transform var(--transition-fast);
 }
 
-.btnPrimary:hover .arrow {
+.btnPrimary:hover .arrow,
+.btnSecondary:hover .arrow {
   transform: translateX(3px);
 }
 

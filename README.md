@@ -1,18 +1,47 @@
-# MidnightProject
+<p align="center">
+  <img src="./public/assets/banner.png" alt="MidnightProject Banner" width="100%" />
+</p>
 
-> Официальный сайт MidnightProject — команды, которая создаёт технологии для людей.
+<h1 align="center">MidnightProject</h1>
 
-## 🚀 Технологии
+<p align="center">
+  <sub>Официальный сайт команды MidnightProject</sub>
+</p>
 
-| Стек | Версия |
-|:---|:---|
-| [Next.js](https://nextjs.org/) (App Router, Turbopack) | 16.x |
-| [React](https://react.dev/) | 19.x |
-| [TypeScript](https://www.typescriptlang.org/) | 5.x |
-| [Lucide React](https://lucide.dev/) | latest |
-| CSS Modules + CSS Custom Properties | — |
+<p align="center">
+  <a href="https://midnight-project.space"><img src="https://img.shields.io/badge/🌐_Website-midnight--project.space-7B5FFF?style=for-the-badge" alt="Website" /></a>
+  <a href="https://discord.gg/heaqDH2uSD"><img src="https://img.shields.io/badge/Discord-MidnightProject-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://t.me/portcreator_ch"><img src="https://img.shields.io/badge/Telegram-Channel-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" /></a>
+</p>
 
-## 📁 Структура
+---
+
+## Стек технологий
+
+<table>
+  <tr>
+    <td><b>Фреймворк</b></td>
+    <td><a href="https://nextjs.org/">Next.js 16</a></td>
+  </tr>
+  <tr>
+    <td><b>UI</b></td>
+    <td><a href="https://react.dev/">React 19</a></td>
+  </tr>
+  <tr>
+    <td><b>Язык</b></td>
+    <td><a href="https://www.typescriptlang.org/">TypeScript</a></td>
+  </tr>
+  <tr>
+    <td><b>Иконки</b></td>
+    <td><a href="https://lucide.dev/">Lucide React</a></td>
+  </tr>
+  <tr>
+    <td><b>i18n</b></td>
+    <td>React Context (RU / EN)</td>
+  </tr>
+</table>
+
+## 📁 Структура проекта
 
 ```
 src/
@@ -28,7 +57,7 @@ src/
 │   ├── Features/           # Карточки проектов
 │   ├── Pricing/            # Тарифы / бета-доступ
 │   ├── Contacts/           # Контактные карточки
-│   └── Footer/             # Подвал
+│   └── Footer/             # Футер
 │
 ├── context/
 │   └── LangContext.tsx     # i18n контекст (RU/EN)
@@ -40,35 +69,62 @@ src/
     └── translations.ts     # Переводы RU/EN
 ```
 
-## ⚡ Запуск
+## ⚡ Быстрый старт
 
 ```bash
-# Установка зависимостей
+# Клонировать репозиторий
+git clone https://github.com/project-midnight/midnight-project-site.git
+cd midnight-project-site
+
+# Установить зависимости
 npm install
 
-# Запуск dev-сервера
+# Запустить dev-сервер
 npm run dev
 ```
 
-Откройте [http://localhost:3000](http://localhost:3000).
+> Откройте **[http://localhost:3000](http://localhost:3000)** в браузере.
 
-## 🔧 Команды 
-<small>Больше полезных команд можете найти в <a href="package.json">package.json</a></small>
+## 🔧 Команды
+
+<small>Больше полезных команд — в <a href="package.json">package.json</a></small>
 
 | Команда | Описание |
 |:---|:---|
-| `npm run dev` | Запуск dev-сервера |
-| `npm run build` | Сборка сайта|
-| `npm run start` | Запуск продакшен-сервера |
+| `npm run dev` |  Запуск dev-сервера |
+| `npm run build` |  Сборка продакшен-версии |
+| `npm run start` |  Запуск продакшен-сервера |
 
 ## 🌐 Локализация
 
-Сайт поддерживает **русский** и **английский** языки. Язык определяется автоматически по `Accept-Language` заголовку и сохраняется в cookie `mp-lang`.
+Сайт поддерживает **русский** 🇷🇺 и **английский** 🇺🇸 языки.
 
+Язык определяется автоматически по заголовку `Accept-Language` и сохраняется в cookie `mp-lang`. Переключатель языка доступен в навигации.
 
-## 📬 Контакты
+## 📬 Обратная связь
 
-- **Email**: [EMAIL_ADDRESS]
-- **Telegram owner**: [@portcreator_1](https://t.me/portcreator_1)
-- **Discord Server**: [MidnightProject](https://discord.gg/midnightproject)
-- **GitHub**: [project-midnight](https://github.com/project-midnight)
+<table>
+  <tr>
+    <td>📧 Email</td>
+    <td><a href="mailto:portcreator@midnight-project.space">portcreator@midnight-project.space</a></td>
+  </tr>
+  <tr>
+    <td>💬 TG Канал</td>
+    <td><a href="https://t.me/portcreator_1">@portcreator_ch</a></td>
+  </tr>
+  <tr>
+    <td>💬 Discord</td>
+    <td><a href="https://discord.gg/heaqDH2uSD">MidnightProject</a></td>
+  </tr>
+</table>
+
+Комиты и PR-ы приветствуются!
+
+---
+
+<p align="center">
+  <sub>Made with 💜 by <a href="https://midnight-project.space">MidnightProject</a> a <a href="https://github.com/PortCreator-">PortCreator</a></sub>
+</p>
+<p align="center">
+  <sub><small>README.md частично написан с помощью искусственного интеллекта.</small></sub>
+</p>

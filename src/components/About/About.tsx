@@ -15,7 +15,7 @@ interface StatItem {
 export default function About() {
   const { t } = useLang();
   const revealContent = useScrollReveal<HTMLDivElement>();
-  const revealStats = useScrollReveal<HTMLDivElement>();
+  const revealStats = useScrollReveal<HTMLDivElement>({ delay: 150 });
 
   const stats: StatItem[] = [
     { number: 'about.stat1.number', label: 'about.stat1.label', icon: Rocket },

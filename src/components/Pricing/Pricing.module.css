@@ -16,9 +16,233 @@
 }
 
 .title {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
+/* --- Toggle --- */
+.toggle {
+  display: inline-flex;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  margin-bottom: var(--space-3xl);
+  gap: 4px;
+}
+
+.toggleBtn {
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-default);
+  white-space: nowrap;
+}
+
+.toggleBtn:hover {
+  color: var(--text-secondary);
+}
+
+.toggleBtnActive {
+  background: var(--accent-gradient);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(123, 95, 255, 0.3);
+}
+
+.toggleBtnActive:hover {
+  color: #fff;
+}
+
+/* --- Tab Content --- */
+.tabContent {
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Plans Grid --- */
+/* --- Single Plan Wrapper --- */
+.singlePlanWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Plan Card --- */
+.planCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-default);
+  overflow: hidden;
+}
+
+.planCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+  opacity: 0;
+  transition: opacity var(--transition-default);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.planCard:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover), 0 0 60px rgba(91, 164, 255, 0.08);
+}
+
+.planCard:hover::before {
+  opacity: 1;
+}
+
+/* Single plan — prominent by default */
+.planSingle {
+  max-width: 400px;
+  width: 100%;
+  border-color: rgba(123, 95, 255, 0.25);
+  box-shadow: 0 0 40px rgba(123, 95, 255, 0.06);
+}
+
+.planSingle::before {
+  opacity: 1;
+}
+
+.planName {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.planPriceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: var(--space-xl);
+}
+
+.planPrice {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.planPeriod {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* Features list */
+.planFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  flex: 1;
+}
+
+.planFeat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.planFeatIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(123, 95, 255, 0.12), rgba(91, 164, 255, 0.12));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent-blue);
+}
+
+/* CTA Button */
+.planCta {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid var(--border-default);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-default);
+  text-decoration: none;
+}
+
+.planCta:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.planCtaPrimary {
+  background: var(--accent-gradient);
+  border: none;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(123, 95, 255, 0.25);
+}
+
+.planCtaPrimary:hover {
+  background: var(--accent-gradient-hover);
+  box-shadow: 0 6px 24px rgba(123, 95, 255, 0.35);
+  color: #fff;
+}
+
+/* --- Booster Note --- */
+.boosterNote {
+  text-align: center;
+  margin-top: var(--space-xl);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.boosterNoteLink {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+  transition: opacity var(--transition-fast);
+}
+
+.boosterNoteLink:hover {
+  opacity: 0.8;
+}
+
+/* --- Hosting Placeholder --- */
 .placeholder {
   background: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
@@ -98,6 +322,7 @@
   box-shadow: var(--shadow-glow);
 }
 
+/* --- Responsive --- */
 @media (max-width: 768px) {
   .section {
     padding: var(--space-3xl) 0;
@@ -116,5 +341,10 @@
     width: 100%;
     max-width: 240px;
     justify-content: center;
+  }
+
+  .toggleBtn {
+    padding: 8px 16px;
+    font-size: 13px;
   }
 }

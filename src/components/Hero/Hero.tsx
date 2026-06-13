@@ -3,9 +3,10 @@
 import { useState, useEffect } from 'react';
 import { useLang } from '@/context/LangContext';
 import { ArrowDown, MessageCircle } from 'lucide-react';
+import Emoji from '@/components/Emoji/Emoji';
 import styles from './Hero.module.css';
 
-const WORDS = ['Project', 'Hosting', 'Booster', 'Drive'];
+const WORDS = ['Project', 'Hosting', 'Flow', 'Drive'];
 const TYPE_SPEED = 100;
 const DELETE_SPEED = 60;
 const PAUSE_AFTER_TYPE = 2200;
@@ -65,7 +66,7 @@ export default function Hero() {
       <div className={styles.glowSecondary} />
       <div className="container">
         <div className={styles.content}>
-          <div className={`${styles.wave} emoji`}>{t('hero.wave')}</div>
+          <div className={styles.wave}><Emoji symbol="👋" size={48} /></div>
           <h1 className={styles.title}>
             {t('hero.title.1')}
             <span className={styles.brandName} suppressHydrationWarning>

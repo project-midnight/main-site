@@ -25,17 +25,17 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: 'MidnightProject',
-  description: 'MidnightProject — Building tools that make the internet faster, servers more reliable, and life easier. InternetBooster, Game Hosting and more.',
+  description: 'MidnightProject Website',
   metadataBase: new URL('https://midnight-project.space'),
   openGraph: {
     title: 'MidnightProject',
-    description: 'Building tools that make the internet faster, servers more reliable, and life easier.',
+    description: 'MidnightProject Website',
     url: 'https://midnight-project.space',
     siteName: 'MidnightProject',
     type: 'website',
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.png',
   },
 };
 

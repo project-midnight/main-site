@@ -50,6 +50,7 @@ export default function Nav() {
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`} id="navbar">
         <div className={styles.inner}>
           <a href="#" className={styles.logo} onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+            <img src="/favicon.png" alt="MP" className={styles.logoIcon} />
             <span className={styles.logoAccent}>Midnight</span>
             <span>Project</span>
           </a>
