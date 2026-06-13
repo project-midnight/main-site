@@ -1,0 +1,177 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+}
+
+.glow {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(123, 95, 255, 0.12) 0%,
+    rgba(91, 164, 255, 0.06) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.glowSecondary {
+  position: absolute;
+  bottom: -30%;
+  left: -15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(123, 95, 255, 0.06) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.wave {
+  font-size: 56px;
+  display: inline-block;
+  margin-bottom: var(--space-md);
+  line-height: 1;
+}
+
+.title {
+  margin-bottom: var(--space-lg);
+}
+
+/* Brand name with typewriter */
+.brandName {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+}
+
+.brandStatic {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: filter var(--transition-default);
+}
+
+.brandName:hover .brandStatic {
+  filter: brightness(1.2);
+}
+
+.brandDynamic {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cursor {
+  display: inline-block;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 300;
+  animation: blink 1s step-end infinite;
+  margin-left: 1px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.subtitle {
+  font-size: 20px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-2xl);
+  max-width: 560px;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 500;
+  background: var(--accent-gradient);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(123, 95, 255, 0.25);
+  transition: all var(--transition-default);
+  white-space: nowrap;
+}
+
+.btnPrimary:hover {
+  background: var(--accent-gradient-hover);
+  box-shadow: 0 6px 24px rgba(123, 95, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 500;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
+  transition: all var(--transition-default);
+  white-space: nowrap;
+}
+
+.btnSecondary:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+}
+
+.arrow {
+  transition: transform var(--transition-fast);
+}
+
+.btnPrimary:hover .arrow,
+.btnSecondary:hover .arrow {
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .wave { font-size: 40px; }
+  .subtitle { font-size: 17px; }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    justify-content: center;
+  }
+}

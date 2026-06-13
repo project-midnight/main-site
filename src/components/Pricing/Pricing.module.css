@@ -1,0 +1,120 @@
+.section {
+  padding: var(--space-4xl) 0;
+}
+
+.label {
+  font-family: var(--font-label), sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-md);
+}
+
+.title {
+  margin-bottom: var(--space-lg);
+}
+
+.placeholder {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3xl) var(--space-2xl);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+  opacity: 0.5;
+}
+
+.icon {
+  font-size: 48px;
+  margin-bottom: var(--space-lg);
+  line-height: 1;
+}
+
+.heading {
+  margin-bottom: var(--space-md);
+}
+
+.text {
+  max-width: 460px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+}
+
+/* Beta contacts */
+.contactLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-md);
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
+  transition: all var(--transition-default);
+  text-decoration: none;
+}
+
+.contactBtn:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .placeholder {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactBtn {
+    width: 100%;
+    max-width: 240px;
+    justify-content: center;
+  }
+}
