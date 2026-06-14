@@ -49,5 +49,5 @@ PR-ы и issue приветствуются. Если хочешь внести 
 ---
 
 <p align="center">
-  <sub>Made with 💜 by <a href="https://github.com/PortCreator-">PortCreator</a> & <a href="https://midnight-project.space">MidnightProject</a></sub>
+  <sub>Made with 💜 by <a href="https://github.com/PortCreator">PortCreator</a> & <a href="https://midnight-project.space">MidnightProject</a></sub>
 </p>
