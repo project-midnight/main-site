@@ -137,6 +137,7 @@ export const translations: Record<LangType, TranslationSchema> = {
     'feature1.bullet2': 'Route optimization to game servers',
     'feature1.bullet3': 'Perfect for CS2, Minecraft and other online games',
     'feature1.bullet4': 'Stable ping and reliable connection',
+    'feature1.bullet5': 'Up to 500 Mbps',
 
     'feature2.title': 'Game Hosting',
     'feature2.status': 'In Development',

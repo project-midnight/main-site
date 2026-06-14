@@ -201,6 +201,10 @@
 }
 
 @media (max-width: 768px) {
+  .inner {
+    padding: 0 var(--space-md);
+  }
+
   .links {
     display: none;
   }
@@ -209,7 +213,22 @@
     display: none;
   }
 
+  .actions .langSwitcher {
+    display: none;
+  }
+
   .burger {
     display: flex;
+  }
+
+  .logo {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .actions {
+    flex-shrink: 0;
   }
 }
